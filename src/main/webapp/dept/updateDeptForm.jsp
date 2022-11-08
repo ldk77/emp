@@ -41,6 +41,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<div>
+	<h1>부서 목록 수정중</h1>
+	</div>	
 	<form method="post" action="<%=request.getContextPath()%>/dept/updateDeptAction.jsp">
 		<table class="table table-bordered">
 			<tr>
@@ -53,7 +56,7 @@
 			</tr>
 		</table>
 		<div>
-		<button type="button" class="btn btn-danger">수정완료</button>
+		<button type="submit" class="btn btn-danger">수정완료</button>
 		</div>
 	</form>
 
