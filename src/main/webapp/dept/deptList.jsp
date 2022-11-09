@@ -41,6 +41,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+	<!-- 메뉴 partial jsp 구성 -->
+	<div>
+		<jsp:include page="../inc/menu.jsp"></jsp:include> 
+	</div>
+	
 	<div>
 	<h1>부서 목록</h1>
 	</div>	

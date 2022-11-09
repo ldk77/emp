@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<div>
+		<jsp:include page="../inc/menu.jsp"></jsp:include> 
+	</div>
+	
+
 	<h2>부서 추가하기</h2>
 	<form action="<%=request.getContextPath()%>/dept/insertDeptAction.jsp">
 	<table>

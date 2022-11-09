@@ -41,6 +41,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+		<!-- 메뉴 partial jsp 구성 -->
+	<div>
+		<jsp:include page="../inc/menu.jsp"></jsp:include> 
+	</div>
+	
 	<div>
 	<h1>부서 목록 수정중</h1>
 	</div>	
