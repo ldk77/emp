@@ -81,19 +81,33 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<style> 	
+	td { padding: 10px; }
+	h2,div, table, tr, td {text-align : center;}	
+</style>
+<meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<title>Insert title here</title>
+
 </head>
 <body>
 	<!-- 메뉴 partial jsp 구성 -->
 	<div>
 		<jsp:include page="/inc/menu.jsp"></jsp:include> 
 	</div>
-	
+	<div>
 	<h1>사원목록</h1>
+	</div>	
 		<!-- 검색 폼 -->
 	<div>
-		<form action="<%=request.getContextPath()%>/emp/empList.jsp" method="post">
+		<form style= "float: right;" action="<%=request.getContextPath()%>/emp/empList.jsp" method="post">
 			<label for ="word">
+				Name :
 				<%
 				if(word != null){
 				%>	
@@ -110,8 +124,8 @@
 		</form>
 	</div>	
 	
-	<table border="1">
-		<tr>
+	<table class="table table-bordered">
+		<tr class="table-info">
 			<th>사원 번호</th>
 			<th>사원 생일</th>
 			<th>First_Name</th>

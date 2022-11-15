@@ -73,40 +73,55 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>boardList</title>		
+		<title>boardList</title>	
+		<style> 	
+	td { padding: 10px; }
+	h2,div, table, tr, td {text-align : center;}	
+	</style>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<!-- Latest compiled and minified CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+	<title>Insert title here</title>
+			
 	</head>
-	<body>
-		<div>			
-		<div>
-			<jsp:include page="../inc/menu.jsp"></jsp:include> <!-- jsp액션코드 -->
-		</div>		
+<body>
+	<div>			
+	<div>
+		<jsp:include page="../inc/menu.jsp"></jsp:include> <!-- jsp액션코드 -->
+	</div>		
 		<!-- 본문시작 -->
-		<div>자유게시판</div>
+	<div>
+		<h1>자유게시판</h1>
+	</div>
 		
 		<!-- 검색 폼 -->
-		<div>
-			<form action="<%=request.getContextPath()%>/board/boardList.jsp" method="post">
-				<label>
-				<%
-				if(word != null){
-				%>	
-					<input type="text" name="word" value="<%=word%>">
-				<%
-				} else {
-				%>				
-					<input type="text" name="word">
-				<%
-				}   
-				%>
-					
-				</label>
+	<div>
+		<form style= "float: right;" action="<%=request.getContextPath()%>/board/boardList.jsp" method="post">
+			<label>
+			제목 :
+			<%
+			if(word != null){
+			%>	
+				<input type="text" name="word" value="<%=word%>">
+			<%
+			} else {
+			%>				
+				<input type="text" name="word">
+			<%
+			}   
+			%>					
+			</label>
 					<button type="submit">검색</button>
-			</form>
-		</div>
+		</form>
+	</div>
 		
 		<!-- 3-1. 모델 데이터 어레이리스트 출력 -->	
-		<table border="1">
-			<tr>
+		<table class="table table-bordered">
+			<tr class="table-info">
 				<th>게시물 번호</th>
 				<th>제목</th>				
 			</tr>
@@ -124,7 +139,9 @@
 					}
 				%>
 		</table>
-		<a href="<%=request.getContextPath()%>/board/insertBoardForm.jsp">새 게시글 작성</a>
+		<a style= "float: right;" href="<%=request.getContextPath()%>/board/insertBoardForm.jsp">
+			<button type="button" class="btn btn-danger">새 게시글 작성</button>
+		</a>
 		<!-- 3-2. 페이징 -->
 		<div>
 			<%
